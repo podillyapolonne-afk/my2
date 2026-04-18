@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c48c31; /* Золотисто-коричневий фон */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Шапка сайту */
+header {
+    background-color: #5d2e06; /* Темно-коричневий */
+    padding: 15px 5%;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 40px;
+    background: #f1c40f;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.logo-text {
+    font-weight: bold;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    background-color: #3d1f05;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background-color: #2a1503;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Основний контент */
+main {
+    flex: 1;
+    padding: 50px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.info-box {
+    background-color: #bd7d2a;
+    border-radius: 20px;
+    min-height: 400px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+    color: #fffde0;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Футер */
+footer {
+    background-color: #5d2e06;
+    padding: 20px;
+    text-align: center;
+    color: #fffde0;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 30px;
+    background: white;
+    color: #5d2e06;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.footer-icons a:hover {
+    transform: scale(1.1);
+}
+.gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Заголовок "Фотогалерея" */
+.gallery-title {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Сітка галереї */
+.gallery-grid {
+    display: grid;
+    /* Створюємо 4 однакові колонки */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* Відступи між картками */
+}
+
+/* Окремий елемент галереї */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Легке заокруглення як на фото */
+    object-fit: cover;
+}
+
+/* Стиль для тексту "опис" */
+.gallery-item p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: lowercase;
+}
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Займає більшу частину висоти екрану */
+}
+
+.auth-container {
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-title {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Картка форми */
+.auth-card {
+    background-color: #e3ae3a; /* Світліший золотистий колір */
+    padding: 40px 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Групування мітки та поля */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #2a1503; /* Темно-коричневий текст */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #f6f3c4; /* Світло-кремовий колір полів */
+    border-radius: 15px;
+    font-size: 18px;
+    box-sizing: border-box; /* Щоб padding не розширював поле */
+}
+
+/* Кнопка "Увійти" */
+.login-submit {
+    margin-top: 10px;
+    background-color: #f6f3c4;
+    color: #000;
+    border: none;
+    padding: 12px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.login-submit:hover {
+    background-color: #fffde0;
+    transform: translateY(-2px);
+}
+
+.login-submit:active {
+    transform: translateY(0);
+}
+
+/* Адаптивність для мобілок */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-title {
+        font-size: 32px;
+    }
+}
